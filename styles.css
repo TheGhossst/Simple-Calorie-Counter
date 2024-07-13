@@ -1,3 +1,4 @@
+/*styles.css*/
 :root {
     --light-grey: #f5f6f7;
     --dark-blue: #0a0a23;
@@ -34,6 +35,7 @@
   h1 {
     text-align: center;
     margin-bottom: 20px;
+    font-weight: 600;
   }
   
   .container {
@@ -42,12 +44,23 @@
   
   label,
   legend {
-    font-weight: bold;
+    font-weight: 600;
   }
   
   .input-container {
     display: flex;
     flex-direction: column;
+  }
+  
+  input, select {
+    min-height: 36px;
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid var(--light-grey);
+    background-color: var(--light-grey);
+    color: var(--dark-blue);
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
   }
   
   button {
@@ -65,15 +78,8 @@
     border-color: var(--light-yellow);
   }
   
-  button,
-  input,
-  select {
-    min-height: 24px;
-    color: var(--dark-blue);
-    padding: 5px;
-    border-radius: 5px;
-    border: 1px solid var(--light-grey);
-    background-color: var(--light-grey);
+  button:active {
+    transform: translateY(2px);
   }
   
   fieldset,
@@ -111,5 +117,4 @@
   .button-group {
     display: flex;
     justify-content: space-between;
-  }
-  
+  }  
