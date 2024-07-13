@@ -1,4 +1,3 @@
-/*styles.css*/
 :root {
     --light-grey: #f5f6f7;
     --dark-blue: #0a0a23;
@@ -13,23 +12,32 @@
   body {
     font-family: "Lato", Helvetica, Arial, sans-serif;
     font-size: 18px;
-    background-color: var(--fcc-blue);
+    background: linear-gradient(to bottom right, var(--fcc-blue), var(--dark-blue));
     color: var(--light-grey);
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  main {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    width: 100%;
+    max-width: 600px;
   }
   
   h1 {
     text-align: center;
+    margin-bottom: 20px;
   }
   
   .container {
-    width: 90%;
-    max-width: 680px;
-  }
-  
-  h1,
-  .container,
-  .output {
-    margin: 20px auto;
+    width: 100%;
   }
   
   label,
@@ -47,6 +55,14 @@
     text-decoration: none;
     background-color: var(--light-yellow);
     border: 2px solid var(--dark-yellow);
+    border-radius: 5px;
+    padding: 10px;
+    transition: background-color 0.3s, border-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: var(--dark-yellow);
+    border-color: var(--light-yellow);
   }
   
   button,
@@ -54,6 +70,10 @@
   select {
     min-height: 24px;
     color: var(--dark-blue);
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid var(--light-grey);
+    background-color: var(--light-grey);
   }
   
   fieldset,
@@ -68,6 +88,7 @@
     border: 2px solid var(--light-grey);
     padding: 10px;
     text-align: center;
+    border-radius: 5px;
   }
   
   .hide {
@@ -86,3 +107,9 @@
   .deficit {
     color: var(--light-green);
   }
+  
+  .button-group {
+    display: flex;
+    justify-content: space-between;
+  }
+  
